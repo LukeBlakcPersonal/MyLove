@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para Ti 💚</title>
+
+    <!-- Redirección si no ha iniciado sesión -->
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+
+    <!-- Fuentes: elegantes y legibles -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap + Íconos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Hero oscuro con tipografía romántica -->
+    <header class="hero-dark py-6">
+        <div class="container text-center">
+            <h1 class="hero-title">Para Mi <span class="accent-her">Estrellita</span>🌟</h1>
+            <p class="hero-subtitle mt-3">Una pequeña idea, que surge con el deseo de contarte un poco de nosostros.</p>
+        </div>
+    </header>
+
+    <!-- Mensaje de bienvenida -->
+    <div id="welcomeBack" class="alert alert-dark text-center d-none mx-auto mb-5"
+        style="max-width: 500px; border: 1px solid rgba(102, 187, 106, 0.3);">
+        Bienvenida, mi amor. 💚
+    </div>
+
+    <!-- 💌 Notas de Amor — Diseño Inmersivo -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Palabras Para Ti</h2>
+            <div class="love-notes-immersive mt-4">
+                <div class="note-card" data-color="green">
+                    <p>Te amo mucho, más de lo que he amado en mi vida y más cada día.</p>
+                </div>
+                <div class="note-card" data-color="orange">
+                    <p>Luego de una noche oscura siempre saldrá el sol, así que no tengas miedo de lo que vives hoy.</p>
+                </div>
+                <div class="note-card" data-color="purple">
+                    <p>Adelante caminante, el camino se hace al andar.</p>
+                </div>
+                <div class="note-card" data-color="green">
+                    <p>No dejes de brillar nunca, porque eres la luna que me guía en mis noches de desvelo.</p>
+                </div>
+                <div class="note-card" data-color="orange">
+                    <p>No estás ni estarás sola nunca más, porque ahí estaré para ti siempre.</p>
+                </div>
+                <div class="note-card" data-color="purple">
+                    <p>Sos mi amor, mi vida, mi esposa, mi princesa, mi sueño, mi meta y mi todo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secretos en hojas -->
+    <section class="py-5 bg-secret">
+        <div class="container">
+            <h2 class="section-title text-center text-light">Secretos que no son tan secretos</h2>
+            <p class="text-center text-muted-light mb-4">Toca cada hoja para descubrir cada uno...</p>
+
+            <div class="row justify-content-center g-4">
+                <div class="col-6 col-md-3 secret-item">
+                    <div class="leaf-button" data-secret="Guardo cada selfie tonta que me envías. Son mi tesoro.">
+                        <span class="leaf-icon">🍂</span>
+                    </div>
+                    <div class="secret-text mt-2"></div>
+                </div>
+                <div class="col-6 col-md-3 secret-item">
+                    <div class="leaf-button"
+                        data-secret="Soñé que viajábamos a Corea... y tú dibujabas a Jungkook como un lobo.">
+                        <span class="leaf-icon">🍂</span>
+                    </div>
+                    <div class="secret-text mt-2"></div>
+                </div>
+                <div class="col-6 col-md-3 secret-item">
+                    <div class="leaf-button" data-secret="Me encanta cómo susurras “Upside Down” cuando estás cansada.">
+                        <span class="leaf-icon">🍂</span>
+                    </div>
+                    <div class="secret-text mt-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Su universo -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Tu Universo</h2>
+            <div class="passions-grid mt-4">
+                <div class="passion-item">
+                    <div class="icon-circle bg-green">🐝</div>
+                    <div>Abejas & Gatos</div>
+                </div>
+                <div class="passion-item">
+                    <div class="icon-circle bg-cyan">🐺</div>
+                    <div>Mi Loba</div>
+                </div>
+                <div class="passion-item">
+                    <div class="icon-circle bg-green">🐢</div>
+                    <div>Alma de Tortuga</div>
+                </div>
+                <div class="passion-item">
+                    <div class="icon-circle bg-red">🎨</div>
+                    <div>Artista</div>
+                </div>
+                <div class="passion-item">
+                    <div class="icon-circle bg-purple">🕯️</div>
+                    <div>Stranger Things</div>
+                </div>
+                <div class="passion-item">
+                    <div class="icon-circle bg-bts">💜</div>
+                    <div>BTS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Música -->
+    <section class="py-5 bg-music">
+        <div class="container">
+            <h2 class="section-title text-center text-light">Nuestra Banda Sonora</h2>
+            <div class="music-list mt-4">
+                <div class="music-track">
+                    <audio controls>
+                        <source src="assets/music/freaks.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="music-label">“Freaks” — Surf Curse</div>
+                </div>
+                <div class="music-track">
+                    <audio controls>
+                        <source src="assets/music/bts_dynamite.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="music-label">“Dynamite” — BTS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Momentos Contigo</h2>
+            <div class="row g-3 mt-2">
+                <div class="col-6 col-md-4">
+                    <img src="assets/photos/photo1.jpg" alt="Nosotros" class="gallery-img">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="assets/photos/photo2.jpg" alt="Tú pintando" class="gallery-img">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="assets/photos/photo3.jpg" alt="Con gatos" class="gallery-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carta final -->
+    <section class="py-6 bg-letter">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Una Promesa</h2>
+                    <div class="letter-content mt-4">
+                        <p>Amor mío,</p>
+                        <p>En ti veo el verde de los bosques antiguos, la calma de las tortugas, la pasión de un lobo
+                            fiel.
+                            Eres arte en movimiento, música en silencio, y mi hogar en cualquier universo.</p>
+                        <p>Para siempre tuyo,<br><span class="signature">— Tu Lobo</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie -->
+    <footer class="py-4 border-top border-dark">
+        <div class="container text-center text-muted">
+            Hecho con 💚 y 🐾 para la mujer que ilumina mi mundo.
+            <br>
+            <button id="logoutBtn" class="btn btn-sm btn-link text-muted mt-2">Cerrar sesión</button>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <audio id="secretSound" preload="auto">
+        <source src="assets/music/secret.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+</body>
+
+</html>
