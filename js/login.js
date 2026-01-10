@@ -1,5 +1,5 @@
 // 🔑 SET YOUR SECRET PASSWORD HERE (change this!)
-const CORRECT_PASSWORD = "freaks"; // 👈 Change this to something meaningful!
+const CORRECT_PASSWORD = "alcapate"; // 👈 Change this to something meaningful!
 
 document.getElementById('loginForm').addEventListener('submit', function (e) {
     e.preventDefault();
