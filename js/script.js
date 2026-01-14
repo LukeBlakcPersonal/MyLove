@@ -79,4 +79,150 @@ document.addEventListener('DOMContentLoaded', () => {
     section.classList.add('fade-in');
     observer.observe(section);
   });
+
+  // ===== MÚSICA INTERACTIVA =====
+  let currentAudio = null;
+
+  function renderMusicList(songs = playlist) {
+    const container = document.getElementById('musicList');
+    if (!container) return;
+
+    container.innerHTML = songs.map((song, index) => `
+    <div class="music-track" data-index="${index}" data-color="${song.color}">
+      <div class="track-info">
+        <div class="track-title">“${song.title}”</div>
+        <div class="track-artist">${song.artist}</div>
+      </div>
+      <button class="play-btn" aria-label="Play">
+        <i class="bi bi-play-fill"></i>
+      </button>
+    </div>
+  `).join('');
+
+    // Añadir eventos a los botones
+    container.querySelectorAll('.play-btn').forEach(btn => {
+      btn.addEventListener('click', handlePlayClick);
+    });
+
+    // Añadir evento de búsqueda
+    const searchInput = document.getElementById('musicSearch');
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        const term = searchInput.value.toLowerCase();
+        const filtered = playlist.filter(song =>
+          song.title.toLowerCase().includes(term) ||
+          song.artist.toLowerCase().includes(term)
+        );
+        renderMusicList(filtered);
+      });
+    }
+  }
+
+  function handlePlayClick(e) {
+    const btn = e.currentTarget;
+    const track = btn.closest('.music-track');
+    const index = parseInt(track.dataset.index);
+    const song = playlist[index];
+
+    // Si ya hay una canción reproduciéndose, detenerla
+    if (currentAudio && currentAudio !== btn) {
+      stopCurrentTrack();
+    }
+
+    // Alternar play/pause
+    if (btn.classList.contains('playing')) {
+      // Pausar
+      btn.querySelector('i').className = 'bi bi-play-fill';
+      btn.classList.remove('playing');
+      if (window.activeAudio) {
+        window.activeAudio.pause();
+        window.activeAudio = null;
+      }
+    } else {
+      // Reproducir
+      if (window.activeAudio) {
+        window.activeAudio.pause();
+      }
+      const audio = new Audio(song.file);
+      audio.play().catch(e => console.log("Audio blocked:", e));
+      window.activeAudio = audio;
+
+      // Actualizar UI
+      document.querySelectorAll('.play-btn').forEach(b => {
+        b.classList.remove('playing');
+        b.querySelector('i').className = 'bi bi-play-fill';
+      });
+      btn.classList.add('playing');
+      btn.querySelector('i').className = 'bi bi-pause-fill';
+
+      // Detener al final
+      audio.onended = () => {
+        btn.classList.remove('playing');
+        btn.querySelector('i').className = 'bi bi-play-fill';
+        window.activeAudio = null;
+      };
+    }
+  }
+
+  function stopCurrentTrack() {
+    if (window.activeAudio) {
+      window.activeAudio.pause();
+      window.activeAudio = null;
+    }
+    document.querySelectorAll('.play-btn').forEach(btn => {
+      btn.classList.remove('playing');
+      btn.querySelector('i').className = 'bi bi-play-fill';
+    });
+  }
+
+  // Inicializar
+  renderMusicList();
 });
+
+const playlist = [
+  {
+    title: "Freaks",
+    artist: "Surf Curse",
+    file: "assets/music/Surf Curse - Freaks [Official Audio].mp3",
+    color: "green"
+  },
+  {
+    title: "Dynamite",
+    artist: "BTS",
+    file: "assets/music/BTS (방탄소년단) 'Dynamite' Official MV.mp3",
+    color: "purple"
+  },
+  {
+    title: "Pied Piper",
+    artist: "BTS",
+    file: "assets/music/Pied Piper.mp3",
+    color: "orange"
+  },
+  {
+    title: "Atlantis",
+    artist: "Seafret",
+    file: "assets/music/Seafret - Atlantis (Official Video).mp3",
+    color: "purple"
+  },
+  {
+    title: "Greedy",
+    artist: "Tate McRae",
+    file: "assets/music/Tate McRae - greedy (Official Video).mp3",
+    color: "orange"
+  },
+  {
+    title: "Young and Beatiful",
+    artist: "Lana del Rey",
+    file: "assets/music/Lana Del Rey - Young and Beautiful.mp3",
+    color: "green"
+  },
+  // 👉 Añade más canciones aquí:
+  /*
+  {
+    title: "Tu Canción",
+    artist: "Artista",
+    file: "assets/music/tu_cancion.mp3",
+    color: "orange" // green, orange o purple
+  }
+  */
+];
