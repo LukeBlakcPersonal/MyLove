@@ -216,6 +216,169 @@ const playlist = [
     file: "assets/music/Lana Del Rey - Young and Beautiful.mp3",
     color: "green"
   },
+  {
+    title: "Complicated",
+    artist: "Avril Lavigne",
+    file: "assets/music/Avril Lavigne - Complicated (Official Video).mp3",
+    color: "orange"
+  },
+  {
+    title: "River",
+    artist: "Bishop Briggs",
+    file: "assets/music/Bishop Briggs - River.mp3",
+    color: "purple"
+  },
+  {
+    title: "BAILE INoLVIDABLE",
+    artist: "BAD BUNNY",
+    file: "assets/music/BAD BUNNY - BAILE INoLVIDABLE (Video Oficial) ｜ DeBÍ TiRAR MáS FOToS.mp3",
+    color: "green"
+  },
+  {
+    title: "FRIENDS",
+    artist: "Chase Atlantic",
+    file: "assets/music/Chase Atlantic - FRIENDS (Official Lyric Video).mp3",
+    color: "orange"
+  },
+  {
+    title: "Clocks",
+    artist: "Coldplay",
+    file: "assets/music/Coldplay - Clocks (Official Video).mp3",
+    color: "purple"
+  },
+  {
+    title: "SWIM",
+    artist: "Chase Atlantic",
+    file: "assets/music/Chase Atlantic - SWIM (Official Music Video).mp3",
+    color: "green"
+  },
+  {
+    title: "Scream & Shout",
+    artist: "Will.i.am ft Britney Spears",
+    file: "assets/music/will.i.am - Scream & Shout ft. Britney Spears.mp3",
+    color: "orange"
+  },
+  {
+    title: "Riptide",
+    artist: "Vance Joy",
+    file: "assets/music/Vance Joy - Riptide (Lyrics).mp3",
+    color: "purple"
+  },
+  {
+    title: "The Beach",
+    artist: "The Neighbourhood",
+    file: "assets/music/The Neighbourhood - The Beach (Audio).mp3",
+    color: "green"
+  },
+  {
+    title: "Rock That Body",
+    artist: "The Black Eyed Peas",
+    file: "assets/music/The Black Eyed Peas - Rock That Body (Official Music Video).mp3",
+    color: "orange"
+  },
+  {
+    title: "Sweater Weather",
+    artist: "The Neighbourhood",
+    file: "assets/music/Sweater Weather.mp3",
+    color: "purple"
+  },
+  {
+    title: "MG",
+    artist: "Stuffers",
+    file: "assets/music/Stuffers - MG.mp3",
+    color: "green"
+  },
+  {
+    title: "Wonderwall",
+    artist: "Oasis",
+    file: "assets/music/Oasis - Wonderwall (Official Video).mp3",
+    color: "orange"
+  },
+  {
+    title: "Paro",
+    artist: "NEJ'",
+    file: "assets/music/NEJ' - Paro (Clip Officiel).mp3",
+    color: "purple"
+  },
+  {
+    title: "Naughty Boy",
+    artist: "La la la ft. Sam Smith",
+    file: "assets/music/Naughty Boy - La la la ft. Sam Smith (Official Video).mp3",
+    color: "green"
+  },
+  {
+    title: "L-O-V-E",
+    artist: "Nat King Cole",
+    file: "assets/music/Oasis - Wonderwall (Official Video).mp3",
+    color: "orange"
+  },
+  {
+    title: "Moonlight",
+    artist: "Chase Atlantic",
+    file: "assets/music/Moonlight.mp3",
+    color: "purple"
+  },
+  {
+    title: "Animals",
+    artist: "Maroon 5",
+    file: "assets/music/Naughty Boy - La la la ft. Sam Smith (Official Video).mp3",
+    color: "green"
+  },
+  {
+    title: "Magic",
+    artist: "Jhon Michael Howell",
+    file: "assets/music/Oasis - Wonderwall (Official Video).mp3",
+    color: "orange"
+  },
+  {
+    title: "Empire State of Mind",
+    artist: "JAY-Z ft. Alicia Key",
+    file: "assets/music/JAY-Z - Empire State Of Mind ft. Alicia Keys.mp3",
+    color: "purple"
+  },
+  {
+    title: "That's My Girl",
+    artist: "Fifth Harmny",
+    file: "assets/music/Fifth Harmony - That's My Girl (Official Video).mp3",
+    color: "green"
+  },
+  {
+    title: "MIDDLE OF THE NIGHT",
+    artist: "Elley Duhé",
+    file: "assets/music/Elley Duhé - MIDDLE OF THE NIGHT (Official Video).mp3",
+    color: "orange"
+  },
+  {
+    title: "Completamente Enamorados",
+    artist: "Chayanne",
+    file: "assets/music/Chayanne - Completamente Enamorados (Audio).mp3",
+    color: "purple"
+  },
+  {
+    title: "Get Lucky",
+    artist: "Daft Punk ft. Pharrell Williams, Nile Rodgers",
+    file: "assets/music/Daft Punk - Get Lucky (Official Audio) ft. Pharrell Williams, Nile Rodgers.mp3",
+    color: "green"
+  },
+  {
+    title: "Te voy a amar",
+    artist: "Axel",
+    file: "assets/music/Axel - Te Voy A Amar.mp3",
+    color: "purple"
+  },
+  {
+    title: "To You, From Me",
+    artist: "Naethan Apollo",
+    file: "assets/music/To You, From Me.mp3",
+    color: "green"
+  },
+  {
+    title: "RUN 달려라 방탄",
+    artist: "BTS",
+    file: "assets/music/달려라 방탄.mp3",
+    color: "green"
+  },
+
   // 👉 Añade más canciones aquí:
   /*
   {
